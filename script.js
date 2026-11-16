@@ -1,19 +1,46 @@
 
-// Enable animation styles
-document.documentElement.classList.add("js");
+/* =========================
+   MOBILE NAVIGATION
+========================= */
 
-// Create scroll progress bar
-const progressBar = document.createElement("div");
-progressBar.className = "scroll-progress";
-document.body.prepend(progressBar);
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-// Update progress while scrolling
+// Mobile menu
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("mobile-nav");
+    navLinks.classList.toggle("open");
+});
+
+// Close menu after clicking a link
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("mobile-nav", "open");
+    });
+});
+
+
+/* =========================
+   FOOTER YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* =========================
+   SCROLL PROGRESS
+========================= */
+
+const progressBar = document.querySelector(".scroll-progress");
+
 function updateProgress() {
-    const scrollable =
+
+    const totalHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
-    const progress = scrollable > 0
-        ? (window.scrollY / scrollable) * 100
+    const progress = totalHeight > 0
+        ? (window.scrollY / totalHeight) * 100
         : 0;
 
     progressBar.style.width = `${progress}%`;
@@ -25,47 +52,88 @@ window.addEventListener("scroll", updateProgress, {
 
 updateProgress();
 
-// Elements to animate
-const animatedElements = document.querySelectorAll(
-    ".section-heading, " +
-    ".about-card, " +
-    ".education, " +
-    ".experience-item, " +
-    ".project-card, " +
-    ".additional-project, " +
-    ".skill-group, " +
-    ".contact-section .container, " +
-    ".statistics"
-);
 
-// Add animation classes
-animatedElements.forEach((element, index) => {
-    element.classList.add("scroll-reveal");
+/* =========================
+   SCROLL REVEAL
+========================= */
 
-    // Stagger cards in groups
-    const cardIndex = index % 4;
+const revealElements = document.querySelectorAll(".reveal");
 
-    if (cardIndex !== 0) {
-        element.classList.add(`delay-${cardIndex}`);
-    }
-});
-
-// Observe elements when they enter viewport
 const observer = new IntersectionObserver(
     (entries, observer) => {
+
         entries.forEach(entry => {
+
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
                 observer.unobserve(entry.target);
             }
+
         });
+
     },
     {
         threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
+        rootMargin: "0px 0px -30px 0px"
     }
 );
 
-animatedElements.forEach(element => {
+revealElements.forEach(element => {
     observer.observe(element);
+});
+
+
+/* =========================
+   NAVBAR SCROLL EFFECT
+========================= */
+
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+}, { passive: true });
+
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+const sections = document.querySelectorAll("main section[id]");
+const navigationLinks = document.querySelectorAll(
+    '.nav-links a[href^="#"]'
+);
+
+const sectionObserver = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                navigationLinks.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") ===
+                        `#${entry.target.id}`
+                    );
+                });
+
+            }
+
+        });
+
+    },
+    {
+        rootMargin: "-35% 0px -55% 0px"
+    }
+);
+
+sections.forEach(section => {
+    sectionObserver.observe(section);
 });
