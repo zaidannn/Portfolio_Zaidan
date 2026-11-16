@@ -1291,3 +1291,69 @@ a {
         width: 100%;
     }
 }
+
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+/* Initial state */
+html.js .scroll-reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Visible state */
+html.js .scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation */
+html.js .scroll-reveal.delay-1 {
+    transition-delay: 0.15s;
+}
+
+html.js .scroll-reveal.delay-2 {
+    transition-delay: 0.3s;
+}
+
+html.js .scroll-reveal.delay-3 {
+    transition-delay: 0.45s;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #3979d7;
+    z-index: 9999;
+}
+
+/* Hover effect */
+.project-card,
+.about-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.project-card:hover,
+.about-card:hover {
+    transform: translateY(-7px);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html.js .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
