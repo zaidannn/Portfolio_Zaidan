@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Muhammad Zaidan Naufal Fikri - IT Support, Automation and Data Analytics Portfolio">
+
+    <meta name="description" content="Muhammad Zaidan Naufal Fikri - IT Support, Business Process Automation, and Data Analytics Portfolio.">
+
+    <meta name="author" content="Muhammad Zaidan Naufal Fikri">
+    <meta name="theme-color" content="#10233f">
+
     <title>Muhammad Zaidan Naufal Fikri | Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -16,22 +22,29 @@
 
 <body>
 
-    <div class="scroll-progress"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <!-- NAVIGATION -->
     <header class="header">
-        <nav class="navbar container">
-            <a href="#home" class="brand">
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="#home" class="brand" aria-label="Zaidan - Home">
                 <span class="brand-icon">Z</span>
                 <span>ZAIDAN<span class="brand-light">.</span></span>
             </a>
 
-            <button class="menu-toggle" aria-label="Toggle menu">
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
                 <span></span>
                 <span></span>
             </button>
 
-            <div class="nav-links">
+            <div class="nav-links" id="primary-navigation">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
@@ -39,6 +52,7 @@
                 <a href="#skills">Expertise</a>
                 <a href="#contact" class="nav-contact">Let's Connect ↗</a>
             </div>
+
         </nav>
     </header>
 
@@ -55,7 +69,9 @@
                     PROFESSIONAL PORTFOLIO · 2026
                 </div>
 
-                <p class="hero-greeting">Hello, I'm Muhammad Zaidan</p>
+                <p class="hero-greeting">
+                    Hello, I'm Muhammad Zaidan
+                </p>
 
                 <h1>
                     Technology &<br>
@@ -70,6 +86,7 @@
                 </p>
 
                 <div class="hero-buttons">
+
                     <a href="#projects" class="btn-primary">
                         Explore My Work <span>↗</span>
                     </a>
@@ -77,6 +94,7 @@
                     <a href="#contact" class="btn-secondary">
                         Contact Me
                     </a>
+
                 </div>
 
                 <div class="hero-info">
@@ -104,6 +122,7 @@
                         <span>CORE SPECIALIZATION</span>
                         <h3>IT Support & Automation</h3>
                     </div>
+
                     <div class="panel-arrow">↗</div>
                 </div>
 
@@ -148,9 +167,13 @@
         <section class="section container" id="about">
 
             <div class="section-heading reveal">
+
                 <div>
                     <span class="eyebrow">01 — ABOUT ME</span>
-                    <h2>Bridging technology<br>with <span>business needs.</span></h2>
+                    <h2>
+                        Bridging technology<br>
+                        with <span>business needs.</span>
+                    </h2>
                 </div>
 
                 <p>
@@ -160,6 +183,7 @@
                     My approach combines technical problem-solving,
                     automation, and data-driven thinking.
                 </p>
+
             </div>
 
 
@@ -168,47 +192,60 @@
                 <article class="about-card reveal">
                     <div class="about-icon">01</div>
                     <h3>IT Operations & Support</h3>
+
                     <p>
                         Supporting users, troubleshooting endpoints,
                         and maintaining reliable IT operations
                         across business environments.
                     </p>
+
                     <span class="about-line"></span>
                 </article>
+
 
                 <article class="about-card reveal">
                     <div class="about-icon">02</div>
                     <h3>Business Automation</h3>
+
                     <p>
                         Improving operational efficiency through
                         automated workflows, approval systems,
                         and process optimization.
                     </p>
+
                     <span class="about-line"></span>
                 </article>
+
 
                 <article class="about-card reveal">
                     <div class="about-icon">03</div>
                     <h3>Data & Reporting</h3>
+
                     <p>
                         Transforming operational data into useful
                         insights through data validation,
                         analytics, and business reporting.
                     </p>
+
                     <span class="about-line"></span>
                 </article>
 
             </div>
 
 
+            <!-- EDUCATION -->
             <div class="education-card reveal">
 
                 <div class="education-logo">UMM</div>
 
                 <div class="education-details">
                     <span class="eyebrow">EDUCATION</span>
+
                     <h3>Universitas Muhammadiyah Malang</h3>
-                    <p>Bachelor's Degree in Informatics Engineering · 2025</p>
+
+                    <p>
+                        Bachelor's Degree in Informatics Engineering · 2025
+                    </p>
                 </div>
 
                 <div class="education-score">
@@ -227,9 +264,14 @@
             <div class="container">
 
                 <div class="section-heading reveal">
+
                     <div>
                         <span class="eyebrow">02 — PROFESSIONAL EXPERIENCE</span>
-                        <h2>Experience that<br>creates <span>impact.</span></h2>
+
+                        <h2>
+                            Experience that<br>
+                            creates <span>impact.</span>
+                        </h2>
                     </div>
 
                     <p>
@@ -237,6 +279,7 @@
                         manufacturing environments, focusing on
                         IT operations, automation, and digital solutions.
                     </p>
+
                 </div>
 
 
@@ -250,16 +293,20 @@
                             <div class="experience-type">CONTRACT</div>
                         </div>
 
+
                         <div class="experience-main">
 
                             <div class="experience-company">
+
                                 <div>
                                     <h3>PT Infomedia Nusantara</h3>
                                     <p>On assignment at Bank Negara Indonesia</p>
                                 </div>
 
                                 <span class="industry-label">BANKING</span>
+
                             </div>
+
 
                             <h4>IT Support & Automation</h4>
 
@@ -269,11 +316,13 @@
                                 operational processes.
                             </p>
 
+
                             <div class="responsibility-title">
                                 KEY RESPONSIBILITIES & ACHIEVEMENTS
                             </div>
 
                             <ul>
+
                                 <li>
                                     Built a Voucher Request & Approval
                                     Automation using Power Automate Cloud,
@@ -300,7 +349,9 @@
                                     for a corporate event, managing
                                     multiple laptops and a live session.
                                 </li>
+
                             </ul>
+
 
                             <div class="experience-tags">
                                 <span>Power Automate</span>
@@ -323,16 +374,20 @@
                             <div class="experience-type">INTERNSHIP</div>
                         </div>
 
+
                         <div class="experience-main">
 
                             <div class="experience-company">
+
                                 <div>
                                     <h3>PT MC PET FILM Indonesia</h3>
                                     <p>Mitsubishi Chemical Group</p>
                                 </div>
 
                                 <span class="industry-label">MANUFACTURING</span>
+
                             </div>
+
 
                             <h4>Information & Technology Intern</h4>
 
@@ -341,11 +396,13 @@
                                 within a manufacturing plant environment.
                             </p>
 
+
                             <div class="responsibility-title">
                                 KEY RESPONSIBILITIES & ACHIEVEMENTS
                             </div>
 
                             <ul>
+
                                 <li>
                                     Provided endpoint troubleshooting
                                     for PCs, laptops, printers,
@@ -369,7 +426,9 @@
                                     dashboard reporting reached
                                     100% data integrity.
                                 </li>
+
                             </ul>
+
 
                             <div class="experience-tags">
                                 <span>Power BI</span>
@@ -394,9 +453,14 @@
         <section class="section container" id="projects">
 
             <div class="section-heading reveal">
+
                 <div>
                     <span class="eyebrow">03 — SELECTED PROJECTS</span>
-                    <h2>Solutions built<br>for <span>real operations.</span></h2>
+
+                    <h2>
+                        Solutions built<br>
+                        for <span>real operations.</span>
+                    </h2>
                 </div>
 
                 <p>
@@ -404,56 +468,40 @@
                     to translate operational challenges into
                     practical technology solutions.
                 </p>
+
             </div>
 
 
             <div class="project-grid">
 
 
-                <!-- VOUCHER -->
-                <article class="project-card project-featured reveal">
+                <!-- VOUCHER AUTOMATION -->
+                <article class="project-card reveal">
 
                     <div class="project-visual voucher-visual">
+
                         <div class="mockup-window">
+
                             <div class="mockup-header">
-                                <span>VOUCHER HUB</span>
-                                <span>REQUEST MANAGEMENT</span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
 
                             <div class="mockup-content">
-                                <div class="mockup-title">
-                                    Request Approval Workflow
-                                </div>
-
-                                <div class="flow-row active">
-                                    <span>01</span>
-                                    New Request
-                                    <b>✓</b>
-                                </div>
-
-                                <div class="flow-row">
-                                    <span>02</span>
-                                    Stock Validation
-                                    <b>✓</b>
-                                </div>
-
-                                <div class="flow-row">
-                                    <span>03</span>
-                                    Manager Approval
-                                    <b>✓</b>
-                                </div>
-
-                                <div class="flow-row">
-                                    <span>04</span>
-                                    Releaser Approval
-                                    <b>✓</b>
-                                </div>
-
+                                <div class="mockup-block dark"></div>
+                                <div class="mockup-block"></div>
+                                <div class="mockup-block"></div>
+                                <div class="mockup-block dark"></div>
                             </div>
+
                         </div>
+
                     </div>
 
+
                     <div class="project-body">
+
                         <div class="project-topline">
                             <span>01 / WORKFLOW AUTOMATION</span>
                             <span>BNI</span>
@@ -468,49 +516,45 @@
                             email communication, and request logging.
                         </p>
 
-                        <div class="project-tags">
+                        <div class="project-tech">
                             <span>Power Automate Cloud</span>
                             <span>Microsoft Teams</span>
                             <span>Workflow Design</span>
                         </div>
+
                     </div>
 
                 </article>
 
 
-                <!-- IASC -->
+                <!-- IASC MONITORING -->
                 <article class="project-card reveal">
 
                     <div class="project-visual iasc-visual">
+
                         <div class="monitor-mockup">
-                            <div class="monitor-title">
-                                IASC OJK MONITORING
-                                <span>ACTIVE</span>
+
+                            <div class="monitor-screen">
+
+                                <h4>IASC OJK MONITORING</h4>
+
+                                <div class="monitor-bars">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
                             </div>
 
-                            <div class="monitor-entry">
-                                <span>Report Status Filtering</span>
-                                <b>DONE</b>
-                            </div>
-
-                            <div class="monitor-entry">
-                                <span>Excel Export</span>
-                                <b>DONE</b>
-                            </div>
-
-                            <div class="monitor-entry">
-                                <span>SharePoint Update</span>
-                                <b>DONE</b>
-                            </div>
-
-                            <div class="monitor-entry">
-                                <span>Retry Handling</span>
-                                <b>DONE</b>
-                            </div>
                         </div>
+
                     </div>
 
+
                     <div class="project-body">
+
                         <div class="project-topline">
                             <span>02 / DESKTOP AUTOMATION</span>
                             <span>BNI</span>
@@ -521,36 +565,47 @@
                         <p>
                             Automated portal monitoring, report
                             filtering, Excel exports, and SharePoint
-                            tracking with retry logic and staging.
+                            tracking with retry logic for failed processes.
                         </p>
 
-                        <div class="project-tags">
+                        <div class="project-tech">
                             <span>Power Automate Desktop</span>
                             <span>Excel</span>
                             <span>SharePoint</span>
                         </div>
+
                     </div>
 
                 </article>
 
 
-                <!-- SAFETY -->
+                <!-- SAFETY INDUCTION -->
                 <article class="project-card reveal">
 
                     <div class="project-visual safety-visual">
-                        <div class="safety-mockup">
-                            <div class="safety-symbol">✓</div>
-                            <span>VENDOR MANAGEMENT</span>
-                            <h3>Safety Induction</h3>
-                            <div class="safety-progress"></div>
-                            <div class="safety-progress short"></div>
-                            <div class="safety-status">
-                                COMPLETED
+
+                        <div class="mockup-window">
+
+                            <div class="mockup-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
+
+                            <div class="mockup-content">
+                                <div class="mockup-block dark"></div>
+                                <div class="mockup-block"></div>
+                                <div class="mockup-block"></div>
+                                <div class="mockup-block dark"></div>
+                            </div>
+
                         </div>
+
                     </div>
 
+
                     <div class="project-body">
+
                         <div class="project-topline">
                             <span>03 / BUSINESS APPLICATION</span>
                             <span>MC PET FILM</span>
@@ -564,41 +619,40 @@
                             induction process.
                         </p>
 
-                        <div class="project-tags">
+                        <div class="project-tech">
                             <span>Power Apps</span>
                             <span>Power Automate</span>
                         </div>
+
                     </div>
 
                 </article>
 
 
-                <!-- DASHBOARD -->
+                <!-- IT BUDGET DASHBOARD -->
                 <article class="project-card reveal">
 
                     <div class="project-visual dashboard-visual">
+
                         <div class="chart-mockup">
-                            <div class="chart-title">
-                                IT BUDGET OVERVIEW
-                                <span>2026</span>
+
+                            <h4>IT BUDGET OVERVIEW</h4>
+
+                            <div class="chart-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
 
-                            <div class="chart-columns">
-                                <i style="height:40%"></i>
-                                <i style="height:65%"></i>
-                                <i style="height:50%"></i>
-                                <i style="height:85%"></i>
-                                <i style="height:70%"></i>
-                                <i style="height:100%"></i>
-                            </div>
-
-                            <div class="chart-caption">
-                                BUDGET VS REALIZATION
-                            </div>
                         </div>
+
                     </div>
 
+
                     <div class="project-body">
+
                         <div class="project-topline">
                             <span>04 / DATA ANALYTICS</span>
                             <span>MC PET FILM</span>
@@ -612,7 +666,7 @@
                             PO and voucher tracking and variance analysis.
                         </p>
 
-                        <div class="project-tags">
+                        <div class="project-tech">
                             <span>Power BI</span>
                             <span>SQL</span>
                             <span>Python</span>
@@ -621,6 +675,7 @@
                         <small class="confidential">
                             Internal company data is kept confidential.
                         </small>
+
                     </div>
 
                 </article>
@@ -628,10 +683,14 @@
             </div>
 
 
+            <!-- ADDITIONAL PROJECT -->
             <div class="additional-project reveal">
+
                 <div>
                     <span class="eyebrow">ADDITIONAL PROJECT</span>
+
                     <h3>Vegetable Image Classification</h3>
+
                     <p>
                         Machine learning project using MobileNetV2
                         and transfer learning for image classification.
@@ -642,6 +701,7 @@
                     <strong>95%</strong>
                     <span>MODEL ACCURACY</span>
                 </div>
+
             </div>
 
         </section>
@@ -653,9 +713,14 @@
             <div class="container">
 
                 <div class="section-heading reveal">
+
                     <div>
                         <span class="eyebrow">04 — EXPERTISE & TECHNOLOGY</span>
-                        <h2>Technical expertise<br>and <span>capabilities.</span></h2>
+
+                        <h2>
+                            Technical expertise<br>
+                            and <span>capabilities.</span>
+                        </h2>
                     </div>
 
                     <p>
@@ -663,15 +728,18 @@
                         business automation, analytics,
                         and application development.
                     </p>
+
                 </div>
 
 
                 <div class="skills-grid">
 
                     <div class="skill-item reveal">
-                        <span>01</span>
+                        <span class="skill-number">01</span>
+
                         <div>
                             <h3>Automation & Productivity</h3>
+
                             <p>
                                 Power Automate · Power Automate Desktop ·
                                 Power Apps · n8n · SharePoint · Teams
@@ -679,10 +747,13 @@
                         </div>
                     </div>
 
+
                     <div class="skill-item reveal">
-                        <span>02</span>
+                        <span class="skill-number">02</span>
+
                         <div>
                             <h3>Data & Analytics</h3>
+
                             <p>
                                 Power BI · SQL · Python · Excel ·
                                 Pandas · NumPy
@@ -690,10 +761,13 @@
                         </div>
                     </div>
 
+
                     <div class="skill-item reveal">
-                        <span>03</span>
+                        <span class="skill-number">03</span>
+
                         <div>
                             <h3>Application Development</h3>
+
                             <p>
                                 HTML · CSS · JavaScript · Flutter ·
                                 Laravel · FastAPI
@@ -701,10 +775,13 @@
                         </div>
                     </div>
 
+
                     <div class="skill-item reveal">
-                        <span>04</span>
+                        <span class="skill-number">04</span>
+
                         <div>
                             <h3>Machine Learning & Tools</h3>
+
                             <p>
                                 TensorFlow · MobileNetV2 · Scikit-learn ·
                                 Git · VS Code · Figma
@@ -737,8 +814,10 @@
                     and technology-related roles.
                 </p>
 
-                <a href="mailto:zaidannaufalfikri@gmail.com"
-                   class="contact-button">
+                <a
+                    href="mailto:zaidannaufalfikri@gmail.com"
+                    class="contact-button"
+                >
                     Contact Me <span>↗</span>
                 </a>
 
@@ -747,12 +826,20 @@
 
                     <div>
                         <span>EMAIL ADDRESS</span>
-                        <p>zaidannaufalfikri@gmail.com</p>
+                        <p>
+                            <a href="mailto:zaidannaufalfikri@gmail.com">
+                                zaidannaufalfikri@gmail.com
+                            </a>
+                        </p>
                     </div>
 
                     <div>
                         <span>PHONE NUMBER</span>
-                        <p>+62 813-2438-8155</p>
+                        <p>
+                            <a href="tel:+6281324388155">
+                                +62 813-2438-8155
+                            </a>
+                        </p>
                     </div>
 
                     <div>
@@ -774,7 +861,7 @@
 
         <a href="#home" class="brand">
             <span class="brand-icon">Z</span>
-            ZAIDAN<span class="brand-light">.</span>
+            <span>ZAIDAN<span class="brand-light">.</span></span>
         </a>
 
         <p>
